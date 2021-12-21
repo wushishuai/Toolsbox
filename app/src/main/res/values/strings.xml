@@ -11,4 +11,6 @@
     <string name="menu_gallery">功能</string>
     <string name="menu_slideshow">更多</string>
     <string name="QR_code_generation">二维码生成</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

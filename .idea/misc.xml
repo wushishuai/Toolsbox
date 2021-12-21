@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/program/Toolsbox/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1" />
+        <entry key="..\:/program/Toolsbox/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1" />
         <entry key="..\:/program/Toolsbox/app/src/main/res/layout/activity_main.xml" value="0.31567028985507245" />
         <entry key="..\:/program/Toolsbox/app/src/main/res/layout/app_bar_main.xml" value="0.31567028985507245" />
+        <entry key="..\:/program/Toolsbox/app/src/main/res/layout/content_main.xml" value="0.31567028985507245" />
         <entry key="..\:/program/Toolsbox/app/src/main/res/layout/fragment_gallery.xml" value="0.14984709480122324" />
         <entry key="..\:/program/Toolsbox/app/src/main/res/layout/fragment_home.xml" value="0.31567028985507245" />
         <entry key="..\:/program/Toolsbox/app/src/main/res/layout/fragment_slideshow.xml" value="0.31567028985507245" />
