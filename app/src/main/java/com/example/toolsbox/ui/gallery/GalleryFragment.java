@@ -15,18 +15,19 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
+import com.example.toolsbox.QrActivity;
 import com.example.toolsbox.R;
 import com.example.toolsbox.databinding.FragmentGalleryBinding;
-import com.example.toolsbox.ui.QR_generation.QRCodeFragment;
 
 public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
     private FragmentGalleryBinding binding;
     private Button QR_generation_button;
-    private FragmentManager manager;
-    private FragmentTransaction ft;
+//    private FragmentManager manager;
+//    private FragmentTransaction ft;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -41,12 +42,17 @@ public class GalleryFragment extends Fragment {
         QR_generation_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                manager = getFragmentManager();
-                QRCodeFragment qrCodeFragment = new QRCodeFragment();
-                ft = manager.beginTransaction();
-                ft.replace(R.id.nav_gallery,qrCodeFragment);
-                ft.addToBackStack(null);
-                ft.commit();
+//                manager = getFragmentManager();
+//                QRCodeFragment qrCodeFragment = new QRCodeFragment();
+//                ft = manager.beginTransaction();
+//                ft.replace(R.id.nav_gallery,qrCodeFragment);
+//                ft.addToBackStack(null);
+//                ft.commit();
+//                Navigation.findNavController(view).navigate(R.id.action_nav_gallery_to_nav_qr);
+                Intent intent = new Intent(getActivity(), QrActivity.class);
+                startActivity(intent);
+
+
 
             }
         });

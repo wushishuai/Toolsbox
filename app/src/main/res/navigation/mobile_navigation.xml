@@ -15,11 +15,15 @@
         android:id="@+id/nav_gallery"
         android:name="com.example.toolsbox.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_gallery" >
+
+    </fragment>
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.toolsbox.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+
 </navigation>
