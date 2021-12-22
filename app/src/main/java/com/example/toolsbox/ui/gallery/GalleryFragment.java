@@ -20,6 +20,7 @@ import androidx.navigation.Navigation;
 import com.example.toolsbox.CompassActivity;
 import com.example.toolsbox.QrActivity;
 import com.example.toolsbox.R;
+import com.example.toolsbox.VideoActivity;
 import com.example.toolsbox.databinding.FragmentGalleryBinding;
 
 public class GalleryFragment extends Fragment implements View.OnClickListener{
@@ -28,6 +29,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
     private FragmentGalleryBinding binding;
     private Button QR_generation_button;
     private Button compass_button;
+    private Button video_buyyon;
 //    private FragmentManager manager;
 //    private FragmentTransaction ft;
 
@@ -42,8 +44,10 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
 //        final TextView textView = binding.btnTools;
         QR_generation_button = binding.QRButton;
         compass_button = binding.compassButton;
+        video_buyyon = binding.videoButton;
         QR_generation_button.setOnClickListener(this);
         compass_button.setOnClickListener(this);
+        video_buyyon.setOnClickListener(this);
 //        QR_generation_button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -86,6 +90,10 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
             case R.id.compass_button:
                 Intent intent1 = new Intent(getActivity(), CompassActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.video_button:
+                Intent intent2 = new Intent(getActivity(), VideoActivity.class);
+                startActivity(intent2);
                 break;
             default:
                 break;

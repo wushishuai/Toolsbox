@@ -12,6 +12,7 @@
     <string name="menu_slideshow">更多</string>
     <string name="QR_code_generation">二维码生成</string>
     <string name="compass">指南针</string>
+    <string name="video">视频播放</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -32,21 +33,6 @@
     <string name="msg_permission_not_granted_yet" translatable="false">Location access not available yet</string>
     <string name="unable_to_get_your_location" translatable="false">Unable to get your location</string>
     <string name="msg_permission_granted" translatable="false">Location Access Granted</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </resources>
