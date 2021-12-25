@@ -5,35 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VideoActivity">
-    <cn.jzvd.JzvdStd
-        android:id="@+id/jz_video"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        tools:ignore="MissingConstraints" />
 
 
-    <EditText
-        android:id="@+id/vip_text"
-        android:layout_width="298dp"
-        android:layout_height="51dp"
-        android:background="@drawable/et_sharp"
+    <Button
+        android:id="@+id/video_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="优酷"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342" />
+        app:layout_constraintVertical_bias="0.076" />
+
+    <Button
+        android:id="@+id/video_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="爱奇艺"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
 
     <Button
         android:id="@+id/video_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="解析播放"
+        android:text="腾讯视频"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.076" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
