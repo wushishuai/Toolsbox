@@ -7,17 +7,33 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-public class ViewActivity extends AppCompatActivity implements View.OnClickListener {
+
+import com.example.toolsbox.function.GoodsCategoryBean;
+import com.github.gzuliyujiang.wheelpicker.OptionPicker;
+import com.github.gzuliyujiang.wheelpicker.contract.OnOptionPickedListener;
+import com.github.gzuliyujiang.wheelpicker.contract.OnOptionSelectedListener;
+import com.github.gzuliyujiang.wheelpicker.widget.OptionWheelLayout;
+import com.github.gzuliyujiang.wheelview.annotation.CurtainCorner;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ViewActivity extends AppCompatActivity implements View.OnClickListener, OnOptionPickedListener {
     private String url;
     private WebView webView;
     private Intent intent;
+    private String baseurl;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +44,46 @@ public class ViewActivity extends AppCompatActivity implements View.OnClickListe
         webView = findViewById(R.id.webView);
         initWebView();
         webView.loadUrl(url);
+
         ImageView imageView_play = (ImageView) findViewById(R.id.imageview_play);
         imageView_play.setOnClickListener(this);
+
+    }
+    public void onOptionBean(View view) {
+        List<GoodsCategoryBean> data = new ArrayList<>();
+        data.add(new GoodsCategoryBean(1, "线路一"));
+        data.add(new GoodsCategoryBean(2, "线路二"));
+        data.add(new GoodsCategoryBean(3, "线路三"));
+        data.add(new GoodsCategoryBean(4, "线路四"));
+        data.add(new GoodsCategoryBean(5, "线路五"));
+        data.add(new GoodsCategoryBean(6, "线路六"));
+        OptionPicker picker = new OptionPicker(this);
+        picker.setTitle("解析线路");
+        picker.setBodyWidth(140);
+        picker.setData(data);
+        picker.setDefaultPosition(2);
+        picker.setOnOptionPickedListener(this);
+        OptionWheelLayout wheelLayout = picker.getWheelLayout();
+        wheelLayout.setIndicatorEnabled(false);
+        wheelLayout.setTextColor(0xFFFF00FF);
+        wheelLayout.setSelectedTextColor(0xFFFF0000);
+        wheelLayout.setTextSize(15 * view.getResources().getDisplayMetrics().scaledDensity);
+        //注：建议通过`setStyle`定制样式设置文字加大，若通过`setSelectedTextSize`设置，该解决方案会导致选择器展示时跳动一下
+        //wheelLayout.setStyle(R.style.WheelStyleDemo);
+        wheelLayout.setSelectedTextSize(17 * view.getResources().getDisplayMetrics().scaledDensity);
+        wheelLayout.setSelectedTextBold(true);
+        wheelLayout.setCurtainEnabled(true);
+        wheelLayout.setCurtainColor(0xEEFF0000);
+        wheelLayout.setCurtainCorner(CurtainCorner.ALL);
+        wheelLayout.setCurtainRadius(5 * view.getResources().getDisplayMetrics().density);
+        wheelLayout.setOnOptionSelectedListener(new OnOptionSelectedListener() {
+            @Override
+            public void onOptionSelected(int position, Object item) {
+                picker.getTitleView().setText(picker.getWheelView().formatItem(position));
+                Log.e("------------",picker.getWheelView().formatItem(position));
+            }
+        });
+        picker.show();
     }
     private void initWebView(){
 
@@ -77,10 +131,39 @@ public class ViewActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.imageview_play:
                 Intent intent = new Intent(getApplicationContext(), PlayActivity.class);
-                intent.putExtra("url", "https://660e.com/?url=" + webView.getUrl());
+                intent.putExtra("url", baseurl + webView.getUrl());
                 startActivity(intent);
                 break;
+
+            default:
+                break;
         }
+    }
+
+    @Override
+    public void onOptionPicked(int position, Object item) {
+//        Toast.makeText(this, position + "-" + item, Toast.LENGTH_SHORT).show();
+//        Log.e("----------",item.toString());
+//        Log.e("-----------------",String.valueOf(position));
+        switch (position){
+            case 0:
+                baseurl = "https://660e.com/?url=";
+                break;
+            case 1:
+                baseurl = "https://jx.parwix.com:4433/player/?url=";
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            default:
+                break;
+        }
+
     }
     //按返回键回退网页
 //    public boolean onKeyDown(int keyCode, KeyEvent event) {

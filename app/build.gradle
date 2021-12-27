@@ -30,6 +30,7 @@ android {
     }
 }
 
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -44,6 +45,9 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'cn.jzvd:jiaozivideoplayer:7.5.0'
     implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:WheelPicker:4.1.6'
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:WheelView:4.1.6'
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:Common:4.1.6'
     compileOnly 'com.squareup.okhttp3:benchmarks:3.12.13'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
