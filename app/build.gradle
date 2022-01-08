@@ -33,6 +33,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api"com.github.jarod:qqwry-java:0.9.+"
 
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
@@ -44,6 +45,8 @@ dependencies {
     implementation 'com.google.zxing:core:3.4.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+    implementation 'com.hanks:htextview-scale:0.1.6'
+    implementation 'com.hanks:htextview-base:0.1.6'
 
 
     implementation 'cn.jzvd:jiaozivideoplayer:7.5.0'
