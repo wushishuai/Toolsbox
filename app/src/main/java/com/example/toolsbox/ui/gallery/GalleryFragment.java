@@ -22,6 +22,7 @@ import com.example.toolsbox.InquiryActivity;
 import com.example.toolsbox.QrActivity;
 import com.example.toolsbox.R;
 import com.example.toolsbox.VideoActivity;
+import com.example.toolsbox.WebActivity;
 import com.example.toolsbox.databinding.FragmentGalleryBinding;
 
 public class GalleryFragment extends Fragment implements View.OnClickListener{
@@ -32,6 +33,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
     private Button compass_button;
     private Button video_button;
     private Button inquiry_button;
+    private Button web_button;
 //    private FragmentManager manager;
 //    private FragmentTransaction ft;
 
@@ -48,10 +50,14 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
         compass_button = binding.compassButton;
         video_button = binding.videoButton;
         inquiry_button = binding.inquiryButton;
+        web_button = binding.webButton;
         QR_generation_button.setOnClickListener(this);
         compass_button.setOnClickListener(this);
         video_button.setOnClickListener(this);
         inquiry_button.setOnClickListener(this);
+        web_button.setOnClickListener(this);
+
+
 //        QR_generation_button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -102,6 +108,10 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
             case R.id.inquiry_button:
                 Intent intent3 = new Intent(getActivity(), InquiryActivity.class);
                 startActivity(intent3);
+                break;
+            case R.id.web_button:
+                Intent intent4 = new Intent(getActivity(), WebActivity.class);
+                startActivity(intent4);
                 break;
             default:
                 break;

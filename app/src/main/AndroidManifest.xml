@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Toolsbox"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".WebActivity"
+            android:exported="true" />
+        <activity
             android:name=".InquiryActivity"
             android:exported="true" />
         <activity

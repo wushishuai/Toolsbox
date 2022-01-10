@@ -7,6 +7,22 @@
     tools:context=".ui.gallery.GalleryFragment">
 
     <Button
+        android:id="@+id/web_button"
+        style="@style/roundbutton"
+        android:layout_width="171dp"
+        android:layout_height="42dp"
+        android:background="@drawable/top_button_shap"
+        android:text="网页源代码获取"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413"
+        tools:ignore="MissingConstraints" />
+
+    <Button
         android:id="@+id/inquiry_button"
         style="@style/roundbutton"
         android:layout_width="171dp"

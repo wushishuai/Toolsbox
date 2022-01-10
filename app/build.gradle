@@ -47,6 +47,8 @@ dependencies {
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
     implementation 'com.hanks:htextview-scale:0.1.6'
     implementation 'com.hanks:htextview-base:0.1.6'
+    implementation group: 'cz.msebera.android' , name: 'httpclient', version: '4.4.1.1'
+
 
 
     implementation 'cn.jzvd:jiaozivideoplayer:7.5.0'
