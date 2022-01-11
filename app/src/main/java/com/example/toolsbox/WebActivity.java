@@ -18,6 +18,7 @@ public class WebActivity extends AppCompatActivity {
     private Button parseurl_button;
     private EditText url_text;
     private TextView web_text;
+    
     private final String TAG = "Webactivity";
 
     @Override
